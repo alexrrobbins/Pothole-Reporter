@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --web-view-ids: Pothole Reporter;
+}
+#PotholeReporter * {
+  margin: 0;
+  padding: 0;
+}
+#iPotholeReporter {
+  position: absolute;
+  box-sizing: border-box;
+  background: #E5E5E5;
+  width: 375px;
+  height: 812px;
+  background-color: rgba(255,255,255,1);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  --web-view-name: iPhone X/XS – 1;
+  --web-view-id: iPhone_X_XS___1;
+  --web-enable-deep-linking: true;
+}
+#Image_1 {
+  opacity: 0.35;
+  fill: url(#Image_1_A0_Rectangle_2_pattern);
+}
+.Image_1 {
+  position: absolute;
+  overflow: visible;
+  width: 220px;
+  height: 220px;
+  left: 78px;
+  top: 47px;
+}
+#Luzerne_County_Pothole_Reporti {
+  opacity: 1;
+  position: absolute;
+  left: 19px;
+  top: 13px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 339px;
+  height: 161px;
+  text-align: center;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(0,0,0,1);
+}
+
+#map {
+  position: absolute;
+  overflow: visible;
+  width: 334px;
+  height: 450px;
+  left: 23px;
+  top: 248px;
+}
+.map {
+    position: absolute;
+    overflow: visible;
+    width: 334px;
+    height: 450px;
+    left: 23px;
+    top: 248px;
+  }
+
+#Button {
+  opacity: 1;
+  fill: rgba(43,167,0,1);
+  stroke: rgb(112, 112, 112);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Button {
+  transform: matrix(1,0,0,1,0,0);
+  overflow: visible;
+  position: absolute;
+  top: 715px;
+  left: 64px;
+  width: 248px;
+  height: 59px;
+}
+#Use_Current_Location {
+  opacity: 1;
+  position: absolute;
+  left: 95px;
+  top: 731px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  width: 187px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(255,255,255,1);
+}
