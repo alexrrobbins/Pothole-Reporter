@@ -16,10 +16,11 @@
 		</rect>
 	</svg>
 	<div id="Luzerne_County_Pothole_Reporti">
-		<span style="">Luzerne County Pothole Reporting<br/></span><span style="font-size:16px;"><br/>Please tap on the map where<br/>you observed a pothole, or <br/>tap "Use Current Location"<br/>if the pothole is at your current<br/>location.<br/></span>
+		<span style="">Luzerne County Pothole Reporting<br/></span><span style="font-size:16px;"><br/>Please tap on the map where<br/>you observed a pothole, or <br/>tap "Use Current Location"<br/>if the pothole is at your current<br/>location.Please hit 'Submit'<br/>when finished.<br/></span>
 	</div>
 	<div id="map"></div>
     <script>
+		//Code taken from https://stackoverflow.com/questions/17382128/google-maps-api-center-map-on-clients-current-location/17383412
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'));
@@ -42,6 +43,16 @@
 	</svg>
 	<div id="Use_Current_Location">
 		<span>Use Current Location</span>
+	</div>
+	<div id="Use_Current_Location">
+		<span>Use Current Location</span>
+	</div>
+	<svg class="SubmitButton" viewBox="0 0 248 59">
+		<path id="SubmitButton" d="M 0 0 L 248 0 L 248 59 L 0 59 L 0 0 Z">
+		</path>
+	</svg>
+	<div id="Submit">
+		<span>Submit</span>
 	</div>
 </div>
 </body>

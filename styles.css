@@ -46,7 +46,7 @@ body {
   padding: 0;
   overflow: hidden;
   width: 339px;
-  height: 161px;
+  height: 250px;
   text-align: center;
   font-family: Segoe UI;
   font-style: normal;
@@ -109,3 +109,41 @@ body {
   font-size: 20px;
   color: rgba(255,255,255,1);
 }
+
+#SubmitButton {
+		opacity: 1;
+		fill: rgba(43,167,0,1);
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.SubmitButton {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 830px;
+		left: 64px;
+		width: 248px;
+		height: 59px;
+	}
+	#Submit {
+		opacity: 1;
+		position: absolute;
+		left: 157px;
+		top: 850px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 63px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
