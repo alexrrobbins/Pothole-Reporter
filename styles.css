@@ -72,30 +72,50 @@ body {
     top: 248px;
   }
 
-#Button {
-  opacity: 1;
-  fill: rgba(43,167,0,1);
-  stroke: rgb(112, 112, 112);
-  stroke-width: 1px;
-  stroke-linejoin: miter;
-  stroke-linecap: butt;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Button {
-  transform: matrix(1,0,0,1,0,0);
-  overflow: visible;
+#button {
   position: absolute;
-  top: 715px;
-  left: 64px;
-  width: 248px;
-  height: 59px;
+  overflow: visible;
+  width: 50px;
+  height: 25px;
 }
+
+.button {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  width: 248px;
+  height: 40px;
+  top: 730px;
+  left: 55px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 15px;
+  display: block;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 #Use_Current_Location {
   opacity: 1;
   position: absolute;
   left: 95px;
-  top: 731px;
+  top: 800px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -110,30 +130,11 @@ body {
   color: rgba(255,255,255,1);
 }
 
-#SubmitButton {
-		opacity: 1;
-		fill: rgba(43,167,0,1);
-		stroke: rgb(112, 112, 112);
-		stroke-width: 1px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	.SubmitButton {
-		transform: matrix(1,0,0,1,0,0);
-		overflow: visible;
-		position: absolute;
-		top: 830px;
-		left: 64px;
-		width: 248px;
-		height: 59px;
-	}
 	#Submit {
 		opacity: 1;
 		position: absolute;
 		left: 157px;
-		top: 850px;
+		top: 900px;
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;

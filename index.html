@@ -37,22 +37,24 @@
     <script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7soQ8WWEzDBhTNUZfjV5bYd-WOz4saWk&callback=initMap"
     ></script>
-	<svg class="Button" viewBox="0 0 248 59">
-		<path id="Button" d="M 0 0 L 248 0 L 248 59 L 0 59 L 0 0 Z">
-		</path>
-	</svg>
+	<currentLocationButton type="button" class="button" onclick="currentLocation()" value="Use Current Location">Use Current Location</currentLocationButton>
+	<script>
+	function currentLocation() {
+		document.getElementById("Use_Current_Location").style.color = "black";
+	}
+	</script>
 	<div id="Use_Current_Location">
 		<span>Use Current Location</span>
 	</div>
-	<div id="Use_Current_Location">
-		<span>Use Current Location</span>
-	</div>
-	<svg class="SubmitButton" viewBox="0 0 248 59">
-		<path id="SubmitButton" d="M 0 0 L 248 0 L 248 59 L 0 59 L 0 0 Z">
-		</path>
-	</svg>
+	<submitButton id="Submit Button" type="button" class="button" onclick="submitLocation()" value="Use Current Location">Submit Location</submitButton>
+	<script>
+	document.getElementById("submitButton").style.top = "1100px";
+	function submitLocation() {
+		document.getElementById("Submit").style.color = "black";
+	}
+	</script>
 	<div id="Submit">
-		<span>Submit</span>
+		<span>Location Submitted</span>
 	</div>
 </div>
 </body>
