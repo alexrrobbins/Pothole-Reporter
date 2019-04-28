@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --web-view-ids: Pothole Reporter;
+}
+#PotholeReporter * {
+  margin: 0;
+  padding: 0;
+}
+#iPotholeReporter {
+  position: absolute;
+  box-sizing: border-box;
+  background: #E5E5E5;
+  width: 375px;
+  height: 812px;
+  background-color: rgba(255,255,255,1);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  --web-view-name: iPhone X/XS – 1;
+  --web-view-id: iPhone_X_XS___1;
+  --web-enable-deep-linking: true;
+}
+#Image_1 {
+  opacity: 0.35;
+  fill: url(#Image_1_A0_Rectangle_2_pattern);
+}
+.Image_1 {
+  position: absolute;
+  overflow: visible;
+  width: 220px;
+  height: 220px;
+  left: 78px;
+  top: 47px;
+}
+#Luzerne_County_Pothole_Reporti {
+  opacity: 1;
+  position: absolute;
+  left: 19px;
+  top: 13px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 339px;
+  height: 250px;
+  text-align: center;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(0,0,0,1);
+}
+
+#map {
+  position: absolute;
+  overflow: visible;
+  width: 334px;
+  height: 450px;
+  left: 23px;
+  top: 248px;
+}
+.map {
+    position: absolute;
+    overflow: visible;
+    width: 334px;
+    height: 450px;
+    left: 23px;
+    top: 248px;
+  }
+
+#button {
+  position: absolute;
+  overflow: visible;
+  width: 50px;
+  height: 25px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  width: 248px;
+  height: 40px;
+  top: 730px;
+  left: 55px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 15px;
+  display: block;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#Use_Current_Location {
+  opacity: 1;
+  position: absolute;
+  left: 95px;
+  top: 1300px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  width: 187px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: black;
+}
+
+	#Submit {
+		opacity: 1;
+		position: absolute;
+		left: 157px;
+		top: 900px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 63px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
