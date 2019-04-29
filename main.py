@@ -13,14 +13,16 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/result',methods=['POST'])
-def worker():
-    latitude = request.index['latitude']
-    longitude = request.index['longitude']
+@app.route('/get_coords',methods=['GET','POST'])
+def get_coords():
+    print(str(request.get_json()))
+    #latitude = request.get_json()['latitude']
+    #longitude = request.get_json()['longitude']
+
     return render_template(
         'result.html',
-        latitude=latitude,
-        longitude=longitude)
+        latitude="latitude",
+        longitude="longitude")
 
 @app.errorhandler(404)
 def page_not_found(e):
