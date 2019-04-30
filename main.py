@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-from flask import Flask, render_template, request, redirect, Response
+from flask import Flask, render_template, request, redirect, Response, jsonify
 
 db_user = os.environ.get('CLOUD_SQL_USERNAME')
 db_password = os.environ.get('CLOUD_SQL_PASSWORD')
@@ -16,21 +16,16 @@ def index():
 
 @app.route('/get_coords',methods=['GET','POST'])
 def get_coords():
-    print(str(request.form.get(key='data')))
-    jsdata = request.form['coordjson']
-
-    print(json.loads(jsdata)[0])
-    if request.method == "POST":
-        print(str(request.form.get(key='data')))
-        #latitude = request.get_json()['latitude']
-        #longitude = request.get_json()['longitude']
-        jsdata = request.form['lat']
-        printdata = json.loads(jsdata)
-        testvariable = str(printdata)
-        return render_template(
-            'result.html',
-            latitude=testvariable,
-            longitude="test")
+    if request.method == 'POST':
+        print('Incoming..')
+        print(request.get_json())  # parse as JSON
+        print(request.get_json()['lat'])
+        print(request.get_json()['lng'])
+        return 'OK', 200
+    return render_template(
+        'result.html',
+        latitude="testing",
+        longitude="test")
 
 @app.errorhandler(404)
 def page_not_found(e):
