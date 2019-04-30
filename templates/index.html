@@ -41,13 +41,7 @@
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7soQ8WWEzDBhTNUZfjV5bYd-WOz4saWk&callback=initMap"
     ></script>
 	<currentLocationButton type="button" class="button" onclick="{{url_for('static',filename='js/currentLocation.js')}}" value="Use Current Location">Use Current Location</currentLocationButton>
-
-	<p id="Use_Current_Location">Latitude: {{latitude}} Longitude: {{longitude}}</p>
 	<submitButton id="Submit Button" type="button" class="button" onclick= value="Use Current Location">Submit Location</submitButton>
-
-	<div id="Submit">
-		<span>Location Submitted</span>
-	</div>
 </div>
 </body>
 </html>

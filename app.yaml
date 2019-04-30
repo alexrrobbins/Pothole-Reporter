@@ -1,13 +1,17 @@
-runtime: python27
-api_version: 1
-threadsafe: true
+runtime: python
+env: flex
 
-libraries:
-- name: ssl
-  version: latest
+beta_settings:
+  cloud_sql_instances: engl-202009-prototype-app:us-east1:roadmarkers
+
+runtime_config:
+  python_version: 3
 
 handlers:
 - url: /static
   static_dir: static
 - url: /.*
-  script: main.app
+  script: main.py
+
+readiness_check:
+  app_start_timeout_sec: 600

@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from flask import Flask, render_template, request, redirect, Response
 
 db_user = os.environ.get('CLOUD_SQL_USERNAME')
@@ -15,14 +16,21 @@ def index():
 
 @app.route('/get_coords',methods=['GET','POST'])
 def get_coords():
-    print(str(request.get_json()))
-    #latitude = request.get_json()['latitude']
-    #longitude = request.get_json()['longitude']
+    print(str(request.form.get(key='data')))
+    jsdata = request.form['coordjson']
 
-    return render_template(
-        'result.html',
-        latitude="latitude",
-        longitude="longitude")
+    print(json.loads(jsdata)[0])
+    if request.method == "POST":
+        print(str(request.form.get(key='data')))
+        #latitude = request.get_json()['latitude']
+        #longitude = request.get_json()['longitude']
+        jsdata = request.form['lat']
+        printdata = json.loads(jsdata)
+        testvariable = str(printdata)
+        return render_template(
+            'result.html',
+            latitude=testvariable,
+            longitude="test")
 
 @app.errorhandler(404)
 def page_not_found(e):
