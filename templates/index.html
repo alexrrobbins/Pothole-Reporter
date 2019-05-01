@@ -43,7 +43,11 @@
     <script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7soQ8WWEzDBhTNUZfjV5bYd-WOz4saWk&callback=initMap"
     ></script>
-	<currentLocationButton type="button" class="button" onclick="{{url_for('static',filename='js/currentLocation.js')}}" value="Use Current Location">Use Current Location</currentLocationButton>
+		<script type=text/javascript src="{{url_for('static',filename='js/currentLocation.js')}}"></script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7soQ8WWEzDBhTNUZfjV5bYd-WOz4saWk&callback=initMap"
+		></script>
+	<a href="/save_coords"><input type="button" class="button" value="Use Current Location"></a>
 	<submitButton id="Submit Button" type="button" class="button" onclick= value="Use Current Location">Submit Location</submitButton>
 </div>
 </body>
