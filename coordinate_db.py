@@ -1,4 +1,6 @@
 def add_to_db(latitude,longitude):
+    print(str(latitude))
+    print(str(longitude))
     import mysql.connector
     from mysql.connector import errorcode
     try:
@@ -15,7 +17,7 @@ def add_to_db(latitude,longitude):
             print(err)
         cnx.close()
 
-    add_coordinates = ("INSERT INTO marker (lat, lng, description) VALUES (%(lat)s, %(lng)s, %(description)s)")
+    add_coordinates = ("INSERT INTO marker (lat, lng, description) VALUES (%(lat)s, %(lng)s, %(description)s);")
     desc = 'This was posted from IUP'
     data_coordinates = {
                         'lat': latitude,
