@@ -44,7 +44,10 @@ def save_coords():
     coordsfile.write('\n')
     coordsfile.close()
     print('File write complete')
-    return 'OK', 200
+    return render_template(
+            'result.html',
+            latitude=str(latitude),
+            longitude=str(longitude))
 
 @app.errorhandler(404)
 def page_not_found(e):

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Coordinates</title>
+    <title>Use Current Location</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   	<link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicon/apple-icon-60x60.png">
   	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicon/apple-icon-72x72.png">
@@ -16,18 +16,16 @@
   	<link rel="icon" type="image/png" sizes="96x96" href="/static/img/favicon/favicon-96x96.png">
   	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
   	<link rel="manifest" href="static/img/favicon//manifest.json">
-    <script type=text/javascript src="{{url_for('static',filename='js/currentLocation.js')}}"></script>
-    <script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7soQ8WWEzDBhTNUZfjV5bYd-WOz4saWk&callback=initMap"
-    ></script>
   </head>
   <body>
     <div id="main">
-      <p>Coordinates:</p>
+      <p>Thank you for your submission!</p>
+      <p>Your coordinates were:</p>
       <p>
-        <strong>latitude:</strong> {{latitude}} <br>
-        <strong>longitude:</strong> {{longitude}} <br>
+        <strong>Latitude:</strong> {{latitude}} <br>
+        <strong>Longitude:</strong> {{longitude}} <br>
       </p>
+      <p>Have a good day!</p>
     </div>
   </body>
 </html>
