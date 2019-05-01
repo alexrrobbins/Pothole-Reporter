@@ -3,6 +3,7 @@ import sys
 import json
 from flask import Flask, render_template, request, redirect, Response, jsonify
 from coords import Coords
+from coordinate_db import add_to_db
 
 db_user = os.environ.get('CLOUD_SQL_USERNAME')
 db_password = os.environ.get('CLOUD_SQL_PASSWORD')
@@ -44,6 +45,7 @@ def save_coords():
     coordsfile.write('\n')
     coordsfile.close()
     print('File write complete')
+    add_to_db(latitude,longitude)
     return render_template(
             'result.html',
             latitude=str(latitude),

@@ -1,14 +1,1 @@
-Latitude: 0
-Longitude: 0
-Latitude: 0
-Longitude: 0
-Latitude: 0
-Longitude: 0
-Latitude: 40.6191897
-Longitude: -79.157037
-Latitude: 40.6191897
-Longitude: -79.157037
-Latitude: 40.6142976
-Longitude: -79.16093439999997
-Latitude: 40.6142976
-Longitude: -79.16093439999997
+
