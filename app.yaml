@@ -13,5 +13,14 @@ handlers:
 - url: /.*
   script: main.py
 
-readiness_check:
-  app_start_timeout_sec: 600
+resources:
+  cpu: 1
+  memory_gb: 2
+  disk_size_gb: 10
+
+health_check:
+  enable_health_check: True
+  check_interval_sec: 5
+  timeout_sec: 4
+  unhealthy_threshold: 2
+  healthy_threshold: 2
