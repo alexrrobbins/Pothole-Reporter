@@ -1,14 +1,7 @@
-import os
-import sys
 import json
 from flask import Flask, render_template, request, redirect, Response, jsonify
 from coords import Coords
 from coordinate_db import add_to_db
-
-db_user = os.environ.get('CLOUD_SQL_USERNAME')
-db_password = os.environ.get('CLOUD_SQL_PASSWORD')
-db_name = os.environ.get('CLOUD_SQL_DATABASE_NAME')
-db_connection_name = os.environ.get('CLOUD_SQL_CONNECTION_NAME')
 
 app = Flask(__name__)
 coordinates = ''
@@ -26,25 +19,12 @@ def get_coords():
         global coordinates
         coordinates = Coords(latitude, longitude)
         return 'OK', 200
-    return render_template(
-        'result.html',
-        latitude="testing",
-        longitude="test")
 
 @app.route('/save_coords')
 def save_coords():
     global coordinates
     latitude = coordinates.get_lat()
     longitude = coordinates.get_long()
-    coordsfile = open('coordsdata.txt','a')
-    coordsfile.write('Latitude: ')
-    coordsfile.write(str(latitude))
-    coordsfile.write('\n')
-    coordsfile.write('Longitude: ')
-    coordsfile.write(str(longitude))
-    coordsfile.write('\n')
-    coordsfile.close()
-    print('File write complete')
     add_to_db(latitude,longitude)
     return render_template(
             'result.html',

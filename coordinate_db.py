@@ -1,4 +1,5 @@
 def add_to_db(latitude,longitude):
+    print("Writing to database")
     print(str(latitude))
     print(str(longitude))
     import mysql.connector
