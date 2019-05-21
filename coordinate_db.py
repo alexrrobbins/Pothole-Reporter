@@ -5,8 +5,8 @@ def add_to_db(latitude,longitude):
     import mysql.connector
     from mysql.connector import errorcode
     try:
-        cnx = mysql.connector.connect(user='guest', password='english202',
-                                    host='35.229.83.90',
+        cnx = mysql.connector.connect(user='', password='',
+                                    host='',
                                     database='roadmarkers')
         cursor = cnx.cursor()
     except mysql.connector.Error as err:
