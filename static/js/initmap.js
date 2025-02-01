@@ -8,37 +8,42 @@ function loadScript() {
   document.head.appendChild(script);
 }
 
-window.onload = loadScript;
-
 var map;
+var latitude;
+var longitude;
+var initialLocation;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: 41.201992, lng: -75.913101 },
     zoom: 8
   });
   navigator.geolocation.getCurrentPosition(function(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-    var initialLocation = new google.maps.LatLng(latitude, longitude);
-    var coordsjson = initialLocation.toJSON();
-    map.setCenter(initialLocation);
-    map.setZoom(12);
-    $.ajax({
-      type: 'POST',
-      contentType: 'application/json',
-      data: JSON.stringify(coordsjson),
-      dataType: 'json',
-      url: '/get_coords',
-      success: function (e) {
-        console.log(e);
-        window.location = "/get_coords";
-      },
-      error: function(error) {
-        console.log(error);
-      }
-    });
+      latitude = position.coords.latitude;
+      longitude = position.coords.longitude;
+      initialLocation = new google.maps.LatLng(latitude, longitude);
+      map.setCenter(initialLocation);
+      map.setZoom(12);
   }, function(positionError) {
-    map.setCenter(new google.maps.LatLng(41.201992, -75.913101));
-    map.setZoom(8);
+      map.setZoom(5);
   });
 }
+
+function getCoords() {
+      var coordsjson = JSON.stringify(initialLocation.toJSON());
+      $.ajax({
+        type: 'POST',
+        contentType: 'application/json',
+        data: coordsjson,
+        dataType: 'json',
+        url: '/get_coords',
+        success: function (e) {
+          console.log(e);
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      });      
+}
+
+
+loadScript();

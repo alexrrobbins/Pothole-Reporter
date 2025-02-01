@@ -8,3 +8,6 @@ class Coords():
 
     def get_long(self):
         return self.longitude
+    
+    def get_coords_json(self):
+        return {'lat': self.latitude, 'lng': self.longitude}

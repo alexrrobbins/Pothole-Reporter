@@ -10,22 +10,22 @@ coordinates = ''
 def index():
     return render_template('index.html')
 
-@app.route('/get_coords',methods=['GET','POST'])
+@app.route('/get_coords', methods=['GET','POST'])
 def get_coords():
-    if request.method == 'POST':
-        print(request.get_json())  # parse as JSON
-        latitude = request.get_json()['lat']
-        longitude = request.get_json()['lng']
-        global coordinates
-        coordinates = Coords(latitude, longitude)
-        return 'OK', 200
+    data = request.get_json()
+    latitude = data['lat']
+    longitude = data['lng']
+    global coordinates
+    coordinates = Coords(latitude, longitude)
+    print(coordinates.get_coords_json())
+    return 'OK', 200
 
 @app.route('/save_coords')
 def save_coords():
     global coordinates
     latitude = coordinates.get_lat()
     longitude = coordinates.get_long()
-    add_to_db(latitude,longitude)
+    #add_to_db(latitude,longitude)
     return render_template(
             'result.html',
             latitude=str(latitude),
